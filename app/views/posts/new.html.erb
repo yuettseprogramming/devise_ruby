@@ -1,19 +1,25 @@
-<h1>New Post</h1>
-
-<%= form_for :post, url: posts_path do |f| %>
-	<p>
-		<%= f.label :title %><br>
-		<%= f.text_field :title %>
-	</p>
-
-	<p>
-		<%= f.label :body %><br>
-		<%= f.text_area :body %>
-	</p>
-
-	<p>
-		<%= f.submit %>
-	</p>
-<% end %>
-
-<%= link_to "Back", root_path %>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<h1 style="color: lightblue;">New Post</h1>
+		</div>
+		<div class="col-12">
+			<%= form_for :post, url: posts_path do |f| %>
+				<p>
+					<%= f.label :title %><br>
+					<%= f.text_field :title, :style=> "width: 50%" %>
+				</p>
+				<p>
+					<%= f.label :body %><br>
+					<%= f.text_area :body, :style=> "width: 50%; height: 100px" %>
+				</p>
+				<p style="color: blue">
+					<%= f.submit %>
+				</p>
+			<% end %>
+		</div>
+		<div class="col-12">
+		<%= link_to "Back", root_path %>
+		</div>
+	</div>
+</div>

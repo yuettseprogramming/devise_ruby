@@ -54,7 +54,6 @@ group :development do
 end
 
 group :development do
-  gem 'devise', '~> 4.2'
 end
 
 group :test do
